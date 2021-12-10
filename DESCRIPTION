@@ -1,7 +1,7 @@
 Package: GEVACO
 Type: Package
 Title: Joint Test of Gene and GxE Interactions via Varying Coefficients
-Version: 1.0.0
+Version: 1.0.1
 Author: Zhengyang Zhou [aut]
         Sydney Manning [aut, cre]
         Chao Xing [aut]
@@ -13,10 +13,10 @@ Encoding: UTF-8
 LazyData: true
 Imports: nlme, RLRsim, stats
 Suggests: rmarkdown, knitr
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.2
 VignetteBuilder: knitr
-Maintainer: Sydney Manning <sydneymanning@my.unthsc.edu>
+Maintainer: Sydney Manning <sydney.manning@unthsc.edu>
 NeedsCompilation: no
-Packaged: 2020-12-01 03:51:59 UTC; Student
+Packaged: 2021-12-08 17:43:36 UTC; Student
 Repository: CRAN
-Date/Publication: 2020-12-03 09:10:06 UTC
+Date/Publication: 2021-12-10 12:10:05 UTC

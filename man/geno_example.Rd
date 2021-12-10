@@ -5,7 +5,7 @@
 \alias{geno_example}
 \title{Genotypic Information}
 \format{
-An object of class \code{matrix} with 500 rows and 20 columns.
+An object of class \code{matrix} (inherits from \code{array}) with 500 rows and 20 columns.
 }
 \usage{
 geno_example

@@ -2,9 +2,9 @@
 title: "GEVACO Introduction"
 author: |
     | Sydney Manning
-    | Department of Biostatistics and Epidemiology
+    | Department of Pharmacotherapy
     | University of North Texas Health Science Center -- Fort Worth
-date: "Nov 30, 2020"
+date: "Dec 8, 2021"
 output:
   pdf_document
 vignette: >
@@ -13,16 +13,16 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include = FALSE}
+````{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-```
+````
 
 ````{r, results="hide", warning=FALSE, message=FALSE}
 library(GEVACO) # load the library
-```
+````
 
 ## Data requirements
 At minimum to run this analysis you need a file storing genotype information and a covariate/trait file. 
@@ -44,25 +44,25 @@ head(cov_example) # view the format of the covariate file
 ````
 If you have PLINK bed files or files in other format, you will need to convert the genotypes to a genotype matrix and filter it for your SNPs of interest. We chose to filter our dataframe by finding the location of all SNPs meeting our desired threshold of minor allele frequency. 
 
-```{r}
+````{r}
 
 data(geno_example) # read in the example genomic file
 
                    # we included the first 20 SNPs to meet our criteria, each column 
 head(geno_example) # is a different SNP
 
-```
+````
 
 ## Performing the screening test
 Using the filtered genomic data, all that's left is to input it with the covariate information into the final function. The default number of simulation iterations is 1E5, and the default number of knots is 7.
 
-```{r}
+````{r}
 
 results <- GxEscreen(dat=cov_example, geno=geno_example, nsim = 1e5, K=7) # run the screen
               # view the first few results: these are the p.values for each SNP in the final
 head(results) # genomic file
 
-```
+````
 
 The final output is a vector containing the p-value of each SNP used in the simulation.
 
